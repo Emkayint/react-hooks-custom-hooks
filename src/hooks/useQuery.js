@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function useQuery(url) {
   const [isLoaded, setIsLoaded] = useState(false);
   // rename `posts` to a more generic `data`
-  const [data, setData] = useState(null);
+  const [posts, setData] = useState(null);
 
   useEffect(() => {
     setIsLoaded(false);
@@ -19,7 +19,7 @@ function useQuery(url) {
   // we want to use the side effect whenever the url changes
 
   // return an *object* with the data and isLoaded state
-  return { data, isLoaded };
+  return { posts, isLoaded };
 }
 
 export default useQuery;
